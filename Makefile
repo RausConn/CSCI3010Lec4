@@ -4,10 +4,14 @@ CXX = g++
 
 CXXFLAGS = -std=c++2a -Wall
 
-all: main
+all: test
 
-main: main.cpp functions_to_implement.cpp
-	$(CXX) $(CXXFLAGS) main.cpp functions_to_implement.cpp -o main
+test: main.o functions_to_implement.o
+	$(CXX) $(CXXFLAGS) -o test main.o functions_to_implement.o
+
+main.o: main.cpp catch.hpp functions_to_implement.hpp
+
+functions_to_implement.o: functions_to_implement.cpp functions_to_implement.hpp
 
 clean:
-	rm main
+	rm -f *.o test
