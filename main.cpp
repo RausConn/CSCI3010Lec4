@@ -1,14 +1,6 @@
-#define CATCH_CONFIG_RUNNER
+#define CATCH_CONFIG_MAIN
 #include "catch.hpp"
 #include "functions_to_implement.hpp"
-
-
-int main(int argc, char* argv[]) {
-
-    int result = Catch::Session().run( argc, argv );
-    return result;
-    
-}
 
 
 TEST_CASE("Remove Twos computed", "[RemoveTwos]") {
