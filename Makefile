@@ -14,4 +14,4 @@ main.o: main.cpp catch.hpp functions_to_implement.hpp
 functions_to_implement.o: functions_to_implement.cpp functions_to_implement.hpp
 
 clean:
-	rm -f *.o test
+	rm *.o test
